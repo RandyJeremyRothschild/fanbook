@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Position</title>
+  </head>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+      background-color: #111;
+    }
+
+    .moms {
+      position: sticky;
+    }
+  </style>
+
+  <body>
+    <div class="moms">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <img
+      src="../Tf.webp"
+      alt=""
+      width="300px"
+      style="position: static; left: 100px"
+    />
+
+    <img
+      src="../437ef6500972f6355fa9c23c93bea37c.jpg"
+      alt=""
+      style="position: relative; left: 100px; top: 110px"
+    />
+
+    
+
+    <img
+      src="../rapper-lil-nas-x_43.jpg"
+      alt=""
+      style="position: absolute; top: 200px; left: 200px"
+    />
+
+    <img src="../Screenshot 2022-09-26 103542.png" alt="" style="position: static; left: 500px;">
+  </body>
+</html>

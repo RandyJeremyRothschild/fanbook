@@ -1,0 +1,15 @@
+{
+    "editor.fonSize": 28,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "liveServer.settings.port": 5501
+}

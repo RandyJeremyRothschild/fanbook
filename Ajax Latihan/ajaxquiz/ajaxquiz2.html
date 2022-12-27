@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style type="text/css">
+    * {
+        font-family: helvetica, arial, sans-serif;
+    }
+
+      div.question-box {
+        margin: 10px 0 20px 0;
+      }
+    </style>
+
+    <script>
+      function showNumMeaning() {
+        let targetNum = $('#magic-num').val();
+        if (targetNum === '') {
+            alert('Insert a number');
+            return;
+        }
+        let tragetUrl = 'http://numbersapi.com/' + targetNum;
+
+        $.ajax({
+            type: 'GET',
+            url: tragetUrl,
+            data: {},
+            success: function(response) {
+                $('#meaning').text(response);
+            }
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Practice JQuery&Ajax</h1>
+
+    <hr />
+
+    <div class="question-box">
+      <h2>[Ajax Quiz02] Interesting Facts about Numbers</h2>
+      <p>Every number has a meaning. Let's figure it out!</p>
+      <p>Alert a message if the input box is submitted empty.</p>
+      <input type="number" id="magic-num" />
+      <button onclick="showNumMeaning()">Submit</button>
+      <h5 id="meaning"></h5>
+    </div>
+  </body>
+</html>
